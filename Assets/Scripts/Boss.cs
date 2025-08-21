@@ -25,5 +25,12 @@ public class Boss : MonoBehaviour
             Vector3 randomDirection = Random.insideUnitSphere * 5f;
             transform.position += randomDirection * Time.deltaTime;
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Boss activated!");
+            // Implement logic for boss activation
+            Destroy(gameObject); //Certain bosses may be destroyed after a certain time
+        }
     }
 }
